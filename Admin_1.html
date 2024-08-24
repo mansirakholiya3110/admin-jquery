@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+    </script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://rawgit.com/highcharts/rounded-corners/master/rounded-corners.js"></script>
+
+
+  <title>Adamin</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      width: 100%;
+      background: linear-gradient(135deg, rgb(204, 207, 208) 0%, rgba(51, 98, 123, 1) 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .iconl {
+      position: relative;
+    }
+
+    span {
+      position: absolute;
+      top: 5%;
+      font-size: 19px;
+    }
+    #iconi1:hover{
+    transition: all 1s linear;
+    transform: scale(0.1);
+    
+    }
+  
+
+  </style>
+</head>
+
+<body>
+
+  <header class="bg_primary d-flex w_100" style="justify-content: space-between;">
+    <div style="gap: 1rem;align-items: center;" class="logo text_light d_flex">
+      <span class="menu_bar" type="button">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+      <h2>ADMIN</h2>
+    </div>
+  </header>
+
+
+  <div class="drawer_background bg_primary2"
+    style="background: #000;position: fixed;top: 0;min-height: 100vh;width: 100%;z-index: 101;opacity: 0.5;"></div>
+  <div class="drawer bg_light head ">
+    <ul>
+      <li><a href="./Admin_1.html" class="active" style="color: #000;"><i class="fa-solid fa-gauge"></i> &nbsp;
+          Dashboard</a></li>
+      <li><a href="./product.html" class=""><i class="fa-solid fa-cart-shopping"></i> &nbsp; Product</a></li>
+      <li><a href="./report.html" class=""><i class="far fa-clipboard"></i>&nbsp; report</a></li>
+      <li><a href="./orderes.html" class=""><i class="fa-solid fa-truck"></i> &nbsp; Orders</a></li>
+      <li><a href="./login.html" class=""><i class="fa-solid fa-right-to-bracket"></i>&nbsp; login</a></li>
+      <input type="checkbox" role="switch" class="animated" id="body"/>
+    </ul>
+  </div>
+
+  <div class="body py-2 px-3 dady ">
+    <h3 class="head">Dashboard</h3>
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="Search..">
+
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="iconl">
+        <i class="fas fa-globe-europe  mt-3 ms-5 text-dark" id="iconi1" style="font-size: 30px;"></i>
+        <i class="fas fa-bell  mt-3 ms-4 text-dark" id="iconi1" style="font-size: 30px;"><span>20</span></i>
+        <i class="fas fa-comment-alt  mt-3 ms-4 text-dark" id="iconi1" style="font-size: 30px;"><span class="ms-1">5</span></i>
+        <i class="fas fa-user-circle  mt-3 ms-4 text-dark" id="iconi1" style="font-size: 30px;"></i>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="row m-0">
+      <div class="col-12 col-md-6 col-lg-3 mb-2">
+        <div class="card shadow-lg text-white bg-primary bg-gradient w-100 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">New Orders</h5>
+            <P>HEADSET <em style="font-size: 14px;font-weight: normal;">(10%)</em></h5>
+            </P>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 mb-2">
+        <div class="card shadow-lg text-white bg-danger bg-gradient w-100 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Unread email</h5>
+            <P>GAMING <em style="font-size: 14px;font-weight: normal;">(12%)</em></h5>
+            </P>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 mb-2">
+        <div class="card shadow-lg text-white bg-success bg-gradient w-100 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Page Visitors</h5>
+            <P>HOODIE <em style="font-size: 14px;font-weight: normal;">(10%)</em></h5>
+            </P>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card shadow-lg text-white bg-warning bg-gradient w-100 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Page Views</h5>
+            <p>BAGPACK <em style="font-size: 14px;font-weight: normal;">(8%)</em></h5>
+            </p>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containe">
+      <div class="col-12 col-md-8 col-lg-4  mb-2 d-flex">
+        <div class="flexing"></div>
+        <figure class="highcharts-figure ms-5">
+          <div id="container"></div>
+        </figure>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="main.js">
+
+
+    </script>
+
+    <script>
+      $(".mode").click(function () {
+        $(".head").toggleClass("text_light");
+      });
+    </script>
+
+</body>
+
+</html>
